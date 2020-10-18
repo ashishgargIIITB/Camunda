@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String Functions</title>
+</head>
+<body>
+<h2>Listing different functions available for string</h2>
+<p>Considering string as: "Please locate where "locate" occurs!" </p> 
+<p>Here the length of string is: <p id ='strLength'> </p>
+<p>Here the location of "locate" is: <p id ='posLocate'> </p>
+<p>Here the pos of last "locate" is: <p id ='posLastLocate'> </p>
+<p>Here the pos of "locate" with Start point is: <p id ='posLocateSL'> </p>
+<p>Here the pos of last "locate" with Start point is: <p id ='posLastLocateSL'> </p>
+<p>Here the pos of "locate" is: <p id ='searchLocate'> </p>
+<p>Here the pos of "loc*" is: <p id ='searchLocate2'> </p>
+<!-- <p>Here the length of string is: <p id ='strLength'> </p> -->
+<!-- <p>Here the length of string is: <p id ='strLength'> </p> -->
+<!-- <p>Here the length of string is: <p id ='strLength'> </p> -->
+<!-- <p>Here the length of string is: <p id ='strLength'> </p> -->
+<!-- <p>Here the length of string is: <p id ='strLength'> </p> -->
+
+
+<button type="button" onclick='document.getElementById("varContent").style.display="none"'>Hide Content</button>
+
+
+<script>
+var str ="Please locate where 'locate' occurs!";
+var strLength = str.length;
+document.getElementById("strLength").innerHTML = strLength;
+
+var posLocate = str.indexOf("locate");
+document.getElementById("posLocate").innerHTML = posLocate;
+
+var posLastLocate = str.lastIndexOf("locate");
+document.getElementById("posLastLocate").innerHTML = posLastLocate;
+
+var posLocateSL = str.indexOf("locate",12);// Mentioning starting position for search
+document.getElementById("posLocateSL").innerHTML = posLocateSL;
+
+var posLastLocateSL = str.lastIndexOf("locate",2); // Mentioning starting position for search
+document.getElementById("posLastLocateSL").innerHTML = posLastLocateSL;
+
+var searchLocate = str.search("locate");
+document.getElementById("searchLocate").innerHTML = searchLocate;
+
+var searchLocate2 = str.search("loc*"); // Search takes regular expressions as well however not the start position
+document.getElementById("searchLocate2").innerHTML = searchLocate2;
+
+
+slice
+substring
+substr
+replace /i
+replace /g
+toUpperCase()
+toLowerCase()
+concat()
+trim
+charAt(3)
+split("'")
+</script>
+</body>
+</html>

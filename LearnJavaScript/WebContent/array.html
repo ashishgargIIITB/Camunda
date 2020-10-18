@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<h3>First element is: </h3> <p id="first"></p>
+<h3>Last element is: </h3> <p id="last"></p>
+<h3>Full array is: </h3> <p id="demo"></p>
+
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("first").innerHTML = cars[0];
+document.getElementById("last").innerHTML = cars[cars.length-1];
+document.getElementById("demo").innerHTML = cars;
+
+//Looping
+var fruits, text, fLen, i;
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+//Adding new element
+cars.push("maruti");
+cars.length("saab");
+
+// The Difference Between Arrays and Objects
+// In JavaScript, arrays use numbered indexes.  
+// In JavaScript, objects use named indexes.
+
+typeof(cars); //object
+Array.isArray(cars); //true
+cars instanceof Array; // true
+
+//convert array to string of text delimited by comma
+cars.toString()
+cars.join("*") // allows you to specify the delimiter/separator
+
+cars.pop(); //removes last element of cars array
+x= cars.push("honda"); //adds specifed element at the last of array and it also returns the length of array
+
+cars.shift(); //removes first element of cars array
+x= cars.unshift("honda"); //adds specifed element at the beginning of array and it also returns the length of array
+
+cars.length; // tells the length of cars array
+cars[1] = "hyundai"; //changes the element at index 1 to hyundai
+
+delete cars[2]; //deletes the values present at index 2 to undefined
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi"); //
+// The first parameter (2) defines the position where new elements should be added (spliced in).
+// The second parameter (0) defines how many elements should be removed.
+// The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+var arr1 = ["Cecilie", "Lone"];
+var arr2 = ["Emil", "Tobias", "Linus"];
+var arr3 = ["Robin", "Morgan"];
+var myChildren = arr1.concat(arr2, arr3); 
+var myChildren1 = myChildren1.concat("Abhi");
+
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);  // slice starting from 1 and go till 3
+</script>
+
+</body>
+</html>
+
+
+
+

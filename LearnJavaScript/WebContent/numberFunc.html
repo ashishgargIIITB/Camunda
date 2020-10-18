@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Number Functions</title>
+</head>
+<body>
+<h2>Listing different functions available for number</h2>
+ 
+<p>Here the length of string is: <p id ='strLength'> </p>
+<p>Here the location of "locate" is: <p id ='posLocate'> </p>
+<p>Here the pos of last "locate" is: <p id ='posLastLocate'> </p>
+<p>Here the pos of "locate" with Start point is: <p id ='posLocateSL'> </p>
+<p>Here the pos of last "locate" with Start point is: <p id ='posLastLocateSL'> </p>
+<p>Here the pos of "locate" is: <p id ='searchLocate'> </p>
+<p>Here the pos of "loc*" is: <p id ='searchLocate2'> </p>
+
+<button type="button" onclick='document.getElementById("varContent").style.display="none"'>Hide Content</button>
+
+
+<script>
+var result=100/"10"; //10
+var result2=100/"Apple"; //NaN;
+var result3= isNaN(100/"Apple"); //True
+var result4 = result2 +5;   //NaN;
+var result5 = result2 + "5";   // NaN5;
+typeof(NaN); // Number
+
+var var1 = 1/0;//Infinity
+
+result.toString(); //10
+
+var x=9.3435;
+x.toFixed(0); //9
+x.toFixed(2); //9.34
+
+x.toPrecision(); //9.3435 as string
+x.toPrecision(2); //9.3 as string
+
+Number()
+Number(true);          // returns 1
+Number(false);         // returns 0
+Number("10");          // returns 10
+Number("  10");        // returns 10
+Number("10  ");        // returns 10
+Number(" 10  ");       // returns 10
+Number("10.33");       // returns 10.33
+Number("10,33");       // returns NaN
+Number("10 33");       // returns NaN
+Number("John");        // returns NaN
+Number(new Date("2017-09-30"));    // returns 1506729600000
+
+parseFloat()
+parseInt()
+parseInt("10");         // returns 10
+parseInt("10.33");      // returns 10
+parseInt("10 20 30");   // returns 10
+parseInt("10 years");   // returns 10
+parseInt("years 10");   // returns NaN 
+
+
+// MAX_VALUE			Returns the largest number possible in JavaScript
+// MIN_VALUE			Returns the smallest number possible in JavaScript
+// POSITIVE_INFINITY	Represents infinity (returned on overflow)
+// NEGATIVE_INFINITY	Represents negative infinity (returned on overflow)
+// NaN					Represents a "Not-a-Number" value
+
+
+</script>
+</body>
+</html>
