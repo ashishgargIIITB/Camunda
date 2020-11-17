@@ -8,14 +8,15 @@ import org.camunda.bpm.engine.delegate.JavaDelegate;
 public class DeductExistingCredit implements JavaDelegate
 {
     public void execute(final DelegateExecution execution) throws Exception {
-        final Random rando1 = new Random();
-        final int payableAmount = (int)execution.getVariable("paymentAmount");
+        Random rando1 = new Random();
+        double payableAmount = (double)execution.getVariable("amountPayable");
+        double amountDeductible = (double)execution.getVariable("amountDeductible");
         execution.setVariable("name", (Object)"ashish");
-        execution.setVariable("remainingAmount", (Object)(payableAmount - 100));
+        execution.setVariable("remainingAmount", (Object)(payableAmount - amountDeductible));
         execution.setVariable("generateFailure", (Object)rando1.nextBoolean());
         System.out.println("********************************************************");
         System.out.println("DeductExistingCredit java code executed");
         final LoggerDelegate logger = new LoggerDelegate();
-        logger.log("Inside CheckWeather Class for deducting from existing Credit");
+        logger.log("Inside DeductExistingCredit Class for deducting payment rom existing Credit");
     }
 }
